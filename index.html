@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sakshi Patil</title>
+  <link href="./dist/output.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-indigo-600  shadow-2xl text-gray-900">
+
+  <!-- Navbar -->
+  <header class=" bg-indigo-400 shadow-md sticky top-0 z-50">
+    <div class="max-w-9xl mx-auto px-4 py-4 flex justify-between ">
+      <h3 class="text-4xl font-bold text-black">Sakshi Patil</h3>
+      <nav>
+        <ul class="flex space-x-6 text-sm my-3 font-medium">
+          <li><a href="#home" class="text-lg  py-4 hover:text-white">Home</a></li>
+          <li><a href="#skills" class="text-lg  py-4 hover:text-white">Skills</a></li>
+           <li><a href="#internships" class="text-lg py-4 hover:text-white">Internships</a></li>
+          <li><a href="#projects" class="text-lg  py-4 hover:text-white">Projects</a></li>
+          <li><a href="#fun-projects" class="text-lg py-4 hover:text-white">Fun Projects</a></li>
+          <li><a href="#certificates" class="text-lg py-4 hover:text-white">Certificates</a></li>
+          <li><a href="#contact" class="text-lg  py-4 hover:text-white">Contact</a></li>
+        </ul>  
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+
+  <section id="home" class="min-h-screen bg-gradient-to-br from-indigo-200 -mt-20 rounded-bl-xxl rounded-br-full   shadow-2xl  to-white flex flex-col-reverse md:flex-row items-center justify-center px-6 py-10">
+    <div class="md:w-1/2 text-center md:text-left space-y-6">
+      <h1 class="text-6xl font-extrabold leading-tight text-gray-900 ">
+        Hi, I'm <span class="text-indigo-600">Sakshi Patil</span>
+      </h1>
+      <h2 class="text-2xl text-gray-700 font-medium">
+        <span
+          id="typing-text"
+          class="text-indigo-500 font-semibold inline-block min-w-[240px] h-[25px]"
+        ></span>
+      </h2>
+      
+      <p class="text-gray-600 text-lg mt-2">
+        Passionate Full-Stack Developer building efficient and scalable web applications.
+      </p>
+  
+      <div class="flex flex-wrap gap-4 mt-6">
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/sakshi-vilas-patil/" target="_blank"
+          class="flex items-center gap-2 px-5 py-3 bg-indigo-800 text-white font-semibold rounded-lg hover:bg-indigo-500 transition">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" class="w-5 h-5" alt="LinkedIn" />
+          LinkedIn
+        </a>
+  
+        <!-- GitHub -->
+        <a href="https://github.com/Sakshie-patil" target="_blank"
+          class="flex items-center gap-2 px-5 py-3 bg-indigo-800 text-white font-semibold rounded-lg hover:bg-indigo-500 transition">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-5 h-5" alt="GitHub" />
+          GitHub
+        </a>
+        <a href="Pradnya_Jagtap_BE_IT_DBIT.pdf" download="Pradnya_Resume.pdf" target="_blank"
+          class="flex items-center gap-2 px-5 py-3 bg-indigo-800 text-white font-semibold rounded-lg transition">
+          <img src="/public/images/download_icon-removebg-preview.jpg" class="w-5 h-5" />
+          Download Resume
+        </a>
+      </div>
+    </div>
+  
+  </section>
+  
+
+  <!-- Typing Animation Script -->
+  <script>
+    const textArray = ["Software Developer", "MERN Stack Engineer", "Tech Enthusiast"];
+    let typingElement = document.getElementById("typing-text");
+    let index = 0, charIndex = 0, isDeleting = false;
+
+    function type() {
+      const currentText = textArray[index];
+      typingElement.textContent = currentText.substring(0, charIndex);
+      if (!isDeleting && charIndex < currentText.length) {
+        charIndex++; setTimeout(type, 100);
+      } else if (isDeleting && charIndex > 0) {
+        charIndex--; setTimeout(type, 50);
+      } else {
+        isDeleting = !isDeleting;
+        if (!isDeleting) index = (index + 1) % textArray.length;
+        setTimeout(type, 0);
+      }
+    }
+    type();
+  </script> 
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20 bg-gray-100 my-10 mx-4 rounded-full scroll-mt-24">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-10">Skills</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-12 mx-auto" /><p>HTML</p></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-12 mx-auto" /><p>CSS</p></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-12 mx-auto" /><p>JavaScript</p></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-12 mx-auto" /><p>React.js</p></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="w-12 mx-auto" /><p>Node.js</p></div>
+        <div>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+          class="w-12 mx-auto" />
+          <p>MySql</p></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="w-12 mx-auto" /><p>Python</p></div>
+        <div><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" class="w-12 mx-auto" /><p>C++</p></div>  
+      </div>
+    </div>
+  </section>
+
+   <!-- Internships Section -->
+  <section id="internships" class="py-20 bg-gradient-to-br from-blue-50 to-indigo-50 scroll-mt-24">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-4">Internships</h3>
+      <p class="text-center text-gray-600 mb-10">Professional experience and learning opportunities</p>
+      <div class="grid grid-cols-1 md:grid-cols-1 gap-8 max-w-2xl mx-auto">
+        
+        <!-- Internship 1 -->
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition text-center transform hover:-translate-y-2 border-t-4 border-indigo-500">
+          <div class="w-20 h-20 bg-gradient-to-br from-indigo-500 to-blue-600 rounded-full mx-auto mb-6 flex items-center justify-center">
+            <span class="text-2xl text-white font-bold">DBIT</span>
+          </div>
+          <h4 class="text-2xl font-semibold text-indigo-700 mb-2">Web Development Intern</h4>
+          <h5 class="text-lg text-gray-600 font-medium mb-4">Don Bosco Institute of Technology (DBIT)</h5>
+          <p class="text-gray-700 mb-6 leading-relaxed">
+    "I worked on the college department website, collaborating with team members to implement innovative features, optimize performance, and improve the overall user experience. My contributions helped streamline navigation, enhance interactivity, and ensure a seamless browsing experience for students and faculty alike.”
+          </p>
+
+          <div class="mb-6">
+            <p class="text-indigo-700 my-2 mx-1 bg-indigo-100 text-sm rounded-full px-3 py-1 inline-block">HTML</p>
+            <p class="text-indigo-700 my-2 mx-1 bg-indigo-100 text-sm rounded-full px-3 py-1 inline-block">CSS</p>
+            <p class="text-indigo-700 my-2 mx-1 bg-indigo-100 text-sm rounded-full px-3 py-1 inline-block">JavaScript</p>
+            <p class="text-indigo-700 my-2 mx-1 bg-indigo-100 text-sm rounded-full px-3 py-1 inline-block">Bootstrap</p>
+          </div>
+
+          <div class="flex justify-center">
+            <a href="#" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-blue-600 text-white font-semibold rounded-lg hover:from-indigo-500 hover:to-blue-500 transition transform hover:scale-105">
+              View Details
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+<section id="projects" class="py-20 bg-white scroll-mt-24">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-10">Projects</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Project 1 -->
+        <div class="bg-gray-50 p-6 rounded-xl shadow-inner hover:shadow-xl transition text-center transform hover:-translate-y-1 ">
+          <img src="/public/images/maidConnect.jpg" class="h-32 w-60 mx-auto mb-4 shadow-lg" alt="QuikSend Logo">
+          <h4 class="text-lg font-semibold text-indigo-700 mb-2 text-center">MaidConect</h4>
+          <p class="text-gray-700 mb-4 ">The platform has User and Admin panels. Users can create profiles, browse maids, filter by skills and availability, and hire staff securely. Admins can manage maid profiles and monitor platform activity. Both sides feature secure login, profile management, and an intuitive interface for smooth and efficient hiring.
+
+            <p class="text-sky-700 my-2 mx-0 bg-blue-100 text-xs rounded-sm px-2 py-1 inline-block">HTML</p>
+            <p class="text-sky-700 my-2 mx-0 bg-blue-100 text-xs rounded-sm px-2 py-1 inline-block">CSS </p>
+            <p class="text-sky-700 my-2 mx-0 bg-blue-100 text-xs rounded-sm px-2 py-1 inline-block">Javascript</p>
+            <p class="text-sky-700 my-2 mx-0 bg-blue-100 text-xs rounded-sm px-2 py-1 inline-block">Node.js</p>
+            <p class="text-sky-700 bg-blue-100 text-xs rounded-sm px-2 py-1 inline-block">Express.js</p>
+            <p class="text-sky-700 bg-blue-100 text-xs rounded-sm px-2 py-1 inline-block">MongoDB</p>
+            
+            <div class="flex justify-center">
+              <a href="https://github.com/Sakshie-patil/majhi-sakhi-project" class="inline-flex items-center px-5 py-2 my-3 bg-indigo-600 text-white rounded-md hover:bg-indigo-500 transition">
+                View
+              </a>
+            </div>
+            
+        </div>
+  
+        <!-- Project 2 -->
+        <div class="bg-gray-50 p-6 rounded-xl shadow-inner hover:shadow-xl transition transform hover:-translate-y-1 text-center">
+          <img src="/public/images/CVGuru.Ai.png" class="h-32 mx-auto mb-4  shadow-lg" alt="FramVault Logo">
+          <h4 class="text-xl text-center font-semibold mb-2 text-indigo-700">CV Guru.Ai </h4>
+          <p class="text-gray-700 mb-4">Developed an AI-powered interview preparation platform that enables users to upload resumes and receive job-specific guidance. Integrated Google Gemini API to generate 10 personalized questions per job title. Provided AI-generated sample answers structured with the STAR method, helping users refine their responses and boost confidence for interviews.
+
+          <p class="text-sky-700 my-2 mx-0 bg-blue-100 text-xs rounded-sm px-2 py-1 inline-block">Python</p>
+          <p class="text-sky-700 bg-blue-100 text-xs rounded-sm px-2 py-1 inline-block">Flask</p>
+          <p class="text-sky-700 bg-blue-100 text-xs rounded-sm px-2 py-1 inline-block">NLP</p>
+
+          <div class="flex justify-center">
+            <a href="https://github.com/Pranjallshinde/CVGuru.Ai" class="inline-flex items-center px-5 py-2 my-3 bg-indigo-600 text-white rounded-md hover:bg-indigo-500 transition">
+              
+              View
+            </a>
+          </div>
+          
+        </div>
+  
+        <!-- Project 3 -->
+        <div class="bg-gray-50 p-6 rounded-xl shadow-inner hover:shadow-xl transition text-center transform hover:-translate-y-1 ">
+          <img src="/public/images/prediction system.png" class="h-32 w-60 mx-auto mb-4 shadow-lg" alt="QuikSend Logo">
+          <h4 class="text-xl text-center font-semibold mb-2 text-indigo-700">Disease Prediction System</h4>
+          <p class="text-gray-700 mb-4">Developed a prediction system using Scikit-learn, achieving 85% accuracy in predicting diabetes and heart disease from patient data. Conducted extensive EDA and applied secure data processing to ensure privacy. Built an intuitive Streamlit interface for real-time assessments, enhancing accessibility, user engagement, and informed healthcare decision-making.
+
+          </p>
+
+          <p class="text-sky-700 my-2 mx-0 bg-blue-100 text-xs rounded-sm px-2 py-1 inline-block">Machine Learning</p>
+          <p class="text-sky-700 bg-blue-100 text-xs rounded-sm px-2 py-1 inline-block">Python</p>
+          <p class="text-sky-700 bg-blue-100 text-xs rounded-sm px-2 py-1 inline-block">Scikit-learn</p>
+        
+          <div class="flex justify-center">
+            <a href="https://github.com/Sakshie-patil/disease-prediction-system" class="inline-flex items-center px-5 py-2 my-3 bg-indigo-600 text-white rounded-md hover:bg-indigo-500 transition">
+              View
+            </a>
+          </div>
+          
+        </div>
+  
+      </div>
+    </div>
+  </section>
+
+  <!-- Fun Projects Section -->
+  <section id="fun-projects" class="py-20 bg-gradient-to-br from-purple-50 to-pink-50 scroll-mt-24">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-4">Fun Projects</h3>
+      <p class="text-center text-gray-600 mb-10">Creative experiments and passion projects built for fun and learning</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Fun Project 1 -->
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition text-center transform hover:-translate-y-2 border-l-4 border-purple-400">
+          <div class="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+            <span class="text-2xl">🎮</span>
+          </div>
+          <h4 class="text-lg font-semibold text-purple-700 mb-2">Tech KBC</h4>
+          <p class="text-gray-700 mb-4">Tech KBC is an interactive quiz game inspired by Kaun Banega Crorepati, testing players’ technical knowledge with engaging questions, lifelines, and a fun learning experience.</p>
+
+          <p class="text-purple-700 my-2 mx-0 bg-purple-100 text-xs rounded-sm px-2 py-1 inline-block">HTML</p>
+          <p class="text-purple-700 bg-purple-100 text-xs rounded-sm px-2 py-1 inline-block">CSS</p>
+          <p class="text-purple-700 bg-purple-100 text-xs rounded-sm px-2 py-1 inline-block">JavaScript</p>
+
+          <div class="flex justify-center">
+            <a href="https://tech-kbc-game.vercel.app" class="inline-flex items-center px-5 py-2 my-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-md hover:from-purple-500 hover:to-pink-500 transition">
+              View
+            </a>
+          </div>
+        </div>
+  
+        <!-- Fun Project 2 -->
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition transform hover:-translate-y-2 text-center border-l-4 border-green-400">
+          <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-blue-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+            <span class="text-2xl">🌤️</span>
+          </div>
+          <h4 class="text-lg font-semibold text-green-700 mb-2">WeatherNow</h4>
+          <p class="text-gray-700 mb-4">  Check real-time weather for any city instantly with this interactive app, providing accurate temperature, humidity, and weather conditions for smarter daily planning <p>
+
+          <p class="text-green-700 my-2 mx-0 bg-green-100 text-xs rounded-sm px-2 py-1 inline-block">HTML/CSS</p>
+          <p class="text-green-700 bg-green-100 text-xs rounded-sm px-2 py-1 inline-block">JavaScript</p>
+          <p class="text-green-700 bg-green-100 text-xs rounded-sm px-2 py-1 inline-block">Weather API</p>
+
+          <div class="flex justify-center">
+            <a href="https://github.com/Sakshie-patil/Weather_app" class="inline-flex items-center px-5 py-2 my-3 bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-md hover:from-green-500 hover:to-blue-500 transition">
+              View
+            </a>
+          </div>
+        </div>
+  
+        <!-- Fun Project 3 -->
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition text-center transform hover:-translate-y-2 border-l-4 border-orange-400">
+          <div class="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-400 rounded-full mx-auto mb-4 flex items-center justify-center">
+            <span class="text-2xl">🚀</span>
+          </div>
+          <h4 class="text-lg font-semibold text-orange-700 mb-2">Url Shortener</h4>
+          <p class="text-gray-700 mb-4">A web app that generates short URLs from long links, tracks the number of clicks, and provides an easy-to-use interface for efficient link management.</p>
+
+          <p class="text-orange-700 my-2 mx-0 bg-orange-100 text-xs rounded-sm px-2 py-1 inline-block">HTML/CSS</p>
+          <p class="text-orange-700 bg-orange-100 text-xs rounded-sm px-2 py-1 inline-block">MongoDB</p>
+          <p class="text-orange-700 bg-orange-100 text-xs rounded-sm px-2 py-1 inline-block">Node.js</p>
+        
+          <div class="flex justify-center">
+            <a href="https://github.com/Sakshie-patil/url_shortener" class="inline-flex items-center px-5 py-2 my-3 bg-gradient-to-r from-orange-600 to-red-600 text-white rounded-md hover:from-orange-500 hover:to-red-500 transition">
+              View
+            </a>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates Section -->
+  <section id="certificates" class="py-20 bg-gray-100 rounded-full mx-4 my-5 scroll-mt-24">
+    <div class="max-w-6xl mx-auto px-4">
+      <h3 class="text-3xl font-bold text-center mb-10">Certificates</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Certificate 1 -->
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1 text-center">
+          <h4 class="text-lg font-semibold text-indigo-700 mb-2">Python Full Stack Developer</h4>
+          <p class="text-gray-700 text-sm">Hands-on training in full-stack web development with Flask and Django
+
+          <div class="flex justify-center mt-4">
+            <a href="https://drive.google.com/file/d/1xVW_grGRnU1iF4rPu4Pk_OZPRqKyn5LC/view?usp=share_link" class="inline-flex items-center px-5 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-500 transition">
+              View
+            </a>
+          </div>
+        </div>
+  
+        <!-- Certificate 2 -->
+         <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1 text-center">
+          <h4 class="text-lg font-semibold text-indigo-700 mb-2">Supervised Machine Learning</h4>
+          <p class="text-gray-700 text-sm">Gained hands-on experience in Supervised Machine Learning with regression and classification models.</p>
+          <div class="flex justify-center mt-4">
+            <a href="https://drive.google.com/file/d/1_rJIm40pDfj8JSB0ylXshHe3eEqBgqTq/view?usp=sharing" class="inline-flex items-center px-5 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-500 transition">
+              View
+            </a>
+          </div>
+        </div>
+  
+        <!-- Certificate 3 -->
+           <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition transform hover:-translate-y-1 text-center">
+          <h4 class="text-lg font-semibold text-indigo-700 mb-2">AWS cloud Training</h4>
+          <p class="text-gray-700 text-sm">Completed AWS Cloud training with hands-on implementation of core services.</p>
+          <div class="flex justify-center mt-4">
+            <a href="https://drive.google.com/file/d/1AyQPSXFlPTuuAKg82mtk2MhVBJD7u3Ae/view?usp=share_link" class="inline-flex items-center px-5 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-500 transition">
+              View
+            </a>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-white scroll-mt-24 ">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h3 class="text-3xl font-bold mb-6">Contact Me</h3>
+      <p class="text-gray-700 mb-6">Want to collaborate? Feel free to drop a message!</p>
+      <form id="contact-form" class="max-w-md mx-auto bg-gray-50 p-6 rounded-lg shadow-md">
+  <div class="mb-4">
+    <input type="text" name="name" placeholder="Your Name" required
+      class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+  </div>
+  <div class="mb-4">
+    <input type="email" name="email" placeholder="Your Email" required
+      class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+  </div>
+  <div class="mb-4">
+    <textarea name="message" rows="4" placeholder="Your Message" required
+      class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+  </div>
+  <button type="submit"
+    class="w-full px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-500 transition">
+    Send Message
+  </button>
+
+  <!-- Feedback text -->
+  <p id="response" class="mt-4 text-center text-sm"></p>
+</form>
+
+  </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class=" text-center py-6 text-gray-600 text-sm">
+    © 2025 Sakshi Patil. All rights reserved.
+  </footer>
+
+</body>
+</html>
+
+<script>
+document.getElementById("contact-form").addEventListener("submit", async function (e) {
+  e.preventDefault();
+  const res = document.getElementById("response");
+
+  const data = {
+    name: this.name.value,
+    email: this.email.value,
+    message: this.message.value,
+  };
+
+  try {
+    const response = await fetch("http://localhost:5000/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+
+    const result = await response.json();
+    res.textContent = result.message;
+    res.style.color = result.success ? "green" : "red";
+    this.reset();
+  } catch (err) {
+    res.textContent = "Something went wrong!";
+    res.style.color = "red";
+  }
+});
+</script>

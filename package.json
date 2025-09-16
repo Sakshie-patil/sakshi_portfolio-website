@@ -1,0 +1,24 @@
+{
+  "name": "tailwind_css",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": " npx tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.8",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "nodemailer": "^7.0.3"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  },
+  "description": ""
+}
